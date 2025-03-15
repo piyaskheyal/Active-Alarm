@@ -64,8 +64,8 @@ void setup() {
     // Connect to Wi-Fi
     Serial.println("Connecting to WiFi");
     while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
-    Serial.print("#");
+        delay(1000);
+        Serial.print("#");
     }
     Serial.println("\nConnected to WiFi");
 
@@ -79,8 +79,8 @@ void setup() {
     configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
     struct tm timeinfo;
     if (!getLocalTime(&timeinfo)) {
-    Serial.println("Failed to obtain time");
-    return;
+        Serial.println("Failed to obtain time");
+        return;
     }
 
     // Initialize motor control pins
